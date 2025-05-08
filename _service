@@ -16,7 +16,7 @@
 		<param name="localfile">*.tar.gz</param>
 	</service>
 	<service name="perl_regex" mode="buildtime">
-		<param name="regex">if($. == 1){ $_ = "\n$_\nRequires: python3-tkinter\n"; }; s~%autosetup.*~%autosetup -p1 -n awesometkinter-%{version}~g;</param>
+		<param name="regex">if($. == 1){ $_ = "\n$_\nRequires: python3-tkinter python3-pillow-tk\n"; }; s~%autosetup.*~%autosetup -p1 -n awesometkinter-%{version}~g;</param>
 		<param name="file">*.spec</param>
 	</service>
 </services>
